@@ -10,6 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import testRunner.SetDriver;
 
@@ -18,10 +19,7 @@ import java.util.Set;
 
 public class LoginLogoSteps {
 
-    @Before
-    void setup() {
-        SetDriver.setup();
-    }
+    {SetDriver.setup();}
 
     private WebDriver driver;
 
@@ -46,6 +44,6 @@ public class LoginLogoSteps {
     @And("End")
     public void end() throws Throwable {
 
-        driver.quit();
+       // driver.quit();
     }
 }

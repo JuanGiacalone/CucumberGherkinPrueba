@@ -13,9 +13,6 @@ import org.junit.runner.RunWith;
         features = "src/test/Features",
         glue = "stepDefinitions"
 )
-
 public class TestRunner {
-    public static void main(String[] args) {
-        System.setProperty("webdriver.gecko.driver","/home/juan/selenium/drivers/geckodriver");
-    }
+
 }
