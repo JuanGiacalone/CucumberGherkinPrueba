@@ -6,8 +6,12 @@ import org.junit.runner.RunWith;
 
 public class SetDriver {
 
-    public static void setup() {
+    public static void setupFirefox() {
+
         WebDriverManager.firefoxdriver().setup();
     }
+    public static void setupChrome() {
 
+        WebDriverManager.chromedriver().setup();
+    }
 }

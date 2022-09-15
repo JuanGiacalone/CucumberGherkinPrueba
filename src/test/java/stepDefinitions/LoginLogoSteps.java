@@ -19,13 +19,15 @@ import java.util.Set;
 
 public class LoginLogoSteps {
 
-    {SetDriver.setup();}
+    // {SetDriver.setupChrome();}
+
+    {System.setProperty("webdriver.chrome.driver","/home/juan/selenium/drivers/chromedriver");}
 
     private WebDriver driver;
 
     @Given("I launch browser")
     public void iLaunchBrowser() throws Throwable{
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
     }
 
     @When("I Open  the homepage")

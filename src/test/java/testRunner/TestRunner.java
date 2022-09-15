@@ -15,4 +15,8 @@ import org.junit.runner.RunWith;
 )
 public class TestRunner {
 
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver","/home/juan/selenium/drivers/chromedriver");
+    }
+
 }

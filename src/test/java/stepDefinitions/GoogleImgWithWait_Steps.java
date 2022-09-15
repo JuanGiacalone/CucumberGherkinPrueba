@@ -20,26 +20,30 @@ import java.time.Duration;
 
 public class GoogleImgWithWait_Steps {
 
-    {SetDriver.setup();}
+    //
+    // {SetDriver.setupChrome();}
+    {System.setProperty("webdriver.chrome.driver","/home/juan/selenium/drivers/chromedriver");}
 
-    WebDriver driver = new FirefoxDriver();
+    WebDriver driver = new ChromeDriver();
 
     @Given("I am on the Google search page")
     public void i_am_on_the_google_search_page() {
 
         driver.get("https://www.google.com/");
 
-        throw new io.cucumber.java.PendingException();
+        driver.findElement(By.id("L2AGLb")).click();
+
+       
     }
     @When("I search for a {string}")
     public void i_search_for_a(String string) {
 
         WebElement element = driver.findElement(By.name("q"));
 
-        element.sendKeys(string);
+        element.sendKeys("hello");
         element.submit();
 
-        throw new io.cucumber.java.PendingException();
+        
     }
     @Then("the page title should start with {string}")
     public void the_page_title_should_start_with(String string) {
@@ -50,11 +54,11 @@ public class GoogleImgWithWait_Steps {
                 return d.getTitle().toLowerCase().startsWith(string);
             }
         });
-        throw new io.cucumber.java.PendingException();
+       
     }
 
     @After()
     public void closeBrowser() {
-        driver.quit();
+
     }
 }
